@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquinaria para construcción | Mezcladoras, winches y motores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --concreto:#ECEAE4;
+    --acero:#20272B;
+    --naranja:#E4571A;
+    --gris:#5E666B;
+    --linea:#CFCBC2;
+    --blanco:#FAF9F6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',Arial,sans-serif;background:var(--concreto);color:var(--acero);line-height:1.55}
+  h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',sans-serif;line-height:1.05}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  /* Cabecera */
+  header{background:var(--acero);color:var(--blanco);position:sticky;top:0;z-index:10}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;max-width:1100px;margin:0 auto;gap:16px;flex-wrap:wrap}
+  .logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.6rem;text-decoration:none}
+  .logo span{color:var(--naranja)}
+  nav a{margin-left:20px;text-decoration:none;font-weight:500}
+  nav a:hover{color:var(--naranja)}
+
+  /* Portada */
+  .hero{background:var(--acero);color:var(--blanco);padding:64px 0 72px;border-top:1px solid #333c41}
+  .hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;max-width:14ch}
+  .hero p{margin:20px 0 28px;max-width:46ch;color:#C9CED1;font-size:1.1rem}
+  .btn{display:inline-block;background:var(--naranja);color:#fff;padding:14px 26px;font-weight:600;text-decoration:none;border-radius:4px;border:0;font-size:1rem;cursor:pointer;font-family:inherit}
+  .btn:hover{background:#c94a14}
+  .btn.sec{background:transparent;border:2px solid #7d868b;margin-left:10px}
+  .btn.sec:hover{background:#2c353a}
+
+  /* Secciones */
+  section{padding:64px 0}
+  h2{font-size:2.4rem;font-weight:800;margin-bottom:8px}
+  .sub{color:var(--gris);margin-bottom:36px;max-width:55ch}
+
+  /* Productos */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+  .prod{background:var(--blanco);border:1px solid var(--linea);display:flex;flex-direction:column}
+  .foto{height:170px;background:#d9d6cd;display:grid;place-items:center;color:var(--gris);font-size:.9rem}
+  .foto img{width:100%;height:100%;object-fit:cover;display:block}
+  .info{padding:18px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .info h3{font-size:1.45rem;font-weight:700}
+  .info ul{list-style:none;color:var(--gris);font-size:.93rem}
+  .info li{border-bottom:1px solid var(--linea);padding:4px 0}
+  .precio{font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;font-weight:700;margin-top:auto;padding-top:12px}
+  .precio small{font-family:'Barlow',sans-serif;font-size:.8rem;font-weight:400;color:var(--gris)}
+  .info .btn{text-align:center;margin-top:8px}
+  .filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+  .filtros button{padding:9px 18px;border:2px solid var(--acero);background:transparent;font:600 .95rem 'Barlow',sans-serif;cursor:pointer;border-radius:4px}
+  .filtros button.activo{background:var(--acero);color:#fff}
+
+  /* Por qué */
+  .porque{background:var(--blanco);border-block:1px solid var(--linea)}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+  .cols h3{font-size:1.4rem;margin-bottom:6px}
+  .cols p{color:var(--gris)}
+
+  /* Contacto */
+  form{display:grid;gap:14px;max-width:560px}
+  label{font-weight:600;font-size:.95rem}
+  input,select,textarea{width:100%;padding:12px;border:1px solid #aaa69c;background:var(--blanco);font:inherit;border-radius:4px;margin-top:4px}
+  .datos{margin-top:28px;color:var(--gris)}
+  .datos strong{color:var(--acero)}
+  footer{background:var(--acero);color:#aeb5b9;text-align:center;padding:24px 20px;font-size:.9rem}
+
+  /* WhatsApp flotante */
+  .wsp{position:fixed;right:18px;bottom:18px;background:#1fa855;color:#fff;padding:13px 20px;border-radius:40px;text-decoration:none;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+
+  @media (max-width:600px){
+    nav a{margin-left:12px;font-size:.95rem}
+    .btn.sec{margin:12px 0 0}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#inicio">MAQUI<span>PRO</span></a>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#porque">Garantía</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Máquinas que trabajan tan duro como tú</h1>
+      <p>Mezcladoras de cemento, winches y motores a gasolina para obras grandes y pequeñas. Stock en tienda y envío a todo el país.</p>
+      <a class="btn" href="#productos">Ver productos</a>
+      <a class="btn sec" href="#contacto">Pedir cotización</a>
+    </div>
+  </div>
+
+  <section id="productos">
+    <div class="wrap">
+      <h2>Nuestros productos</h2>
+      <p class="sub">Precios referenciales. Escríbenos para confirmar stock y precio por cantidad.</p>
+
+      <div class="filtros" role="group" aria-label="Filtrar productos">
+        <button class="activo" data-f="todos">Todos</button>
+        <button data-f="mezcladora">Mezcladoras</button>
+        <button data-f="winche">Winches</button>
+        <button data-f="motor">Motores</button>
+      </div>
+
+      <div class="grid" id="lista">
+
+        <!-- Para poner una foto real, cambia el <span> por: <img src="foto.jpg" alt="Nombre del producto"> -->
+        <article class="prod" data-cat="mezcladora">
+          <div class="foto"><img src="mi-foto.jpg" alt="Mezcladora 9 p³"></div>
+          <div class="info">
+            <h3>Mezcladora 9 p³</h3>
+            <ul><li>Capacidad: 9 pies cúbicos</li><li>Motor a gasolina 7 HP</li><li>Tolva de acero reforzado</li></ul>
+            <p class="precio">S/ 3,200 <small>precio referencial</small></p>
+            <a class="btn" href="#contacto" data-prod="Mezcladora 9 p³">Cotizar</a>
+          </div>
+        </article>
+
+        <article class="prod" data-cat="mezcladora">
+          <div class="foto"><span>Foto de la mezcladora</span></div>
+          <div class="info">
+            <h3>Mezcladora 11 p³</h3>
+            <ul><li>Capacidad: 11 pies cúbicos</li><li>Motor a gasolina 9 HP</li><li>Ruedas para transporte</li></ul>
+            <p class="precio">S/ 3,900 <small>precio referencial</small></p>
+            <a class="btn" href="#contacto" data-prod="Mezcladora 11 p³">Cotizar</a>
+          </div>
+        </article>
+
+        <article class="prod" data-cat="winche">
+          <div class="foto"><span>Foto del winche</span></div>
+          <div class="info">
+            <h3>Winche de construcción 300 kg</h3>
+            <ul><li>Carga máxima: 300 kg</li><li>Cable de acero incluido</li><li>Freno de seguridad</li></ul>
+            <p class="precio">S/ 2,450 <small>precio referencial</small></p>
+            <a class="btn" href="#contacto" data-prod="Winche de construcción 300 kg">Cotizar</a>
+          </div>
+        </article>
+
+        <article class="prod" data-cat="winche">
+          <div class="foto"><span>Foto del winche</span></div>
+          <div class="info">
+            <h3>Winche de construcción 500 kg</h3>
+            <ul><li>Carga máxima: 500 kg</li><li>Para obras de varios pisos</li><li>Estructura reforzada</li></ul>
+            <p class="precio">S/ 3,600 <small>precio referencial</small></p>
+            <a class="btn" href="#contacto" data-prod="Winche de construcción 500 kg">Cotizar</a>
+          </div>
+        </article>
+
+        <article class="prod" data-cat="motor">
+          <div class="foto"><span>Foto del motor</span></div>
+          <div class="info">
+            <h3>Motor a gasolina 7 HP</h3>
+            <ul><li>4 tiempos, arranque manual</li><li>Eje horizontal</li><li>Ideal para mezcladoras y bombas</li></ul>
+            <p class="precio">S/ 980 <small>precio referencial</small></p>
+            <a class="btn" href="#contacto" data-prod="Motor a gasolina 7 HP">Cotizar</a>
+          </div>
+        </article>
+
+        <article class="prod" data-cat="motor">
+          <div class="foto"><span>Foto del motor</span></div>
+          <div class="info">
+            <h3>Motor a gasolina 13 HP</h3>
+            <ul><li>4 tiempos, alto rendimiento</li><li>Bajo consumo de combustible</li><li>Para trabajo continuo</li></ul>
+            <p class="precio">S/ 1,650 <small>precio referencial</small></p>
+            <a class="btn" href="#contacto" data-prod="Motor a gasolina 13 HP">Cotizar</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="porque" class="porque">
+    <div class="wrap">
+      <h2>Compra con respaldo</h2>
+      <p class="sub">Sabemos que una máquina parada es plata perdida.</p>
+      <div class="cols">
+        <div><h3>Garantía por escrito</h3><p>Todos los equipos incluyen garantía de fábrica y comprobante de pago.</p></div>
+        <div><h3>Repuestos disponibles</h3><p>Tenemos repuestos y servicio técnico para que no pares la obra.</p></div>
+        <div><h3>Envío a provincias</h3><p>Despachamos por agencia a todo el Perú con seguimiento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <h2>Pide tu cotización</h2>
+      <p class="sub">Llena el formulario y te respondemos por WhatsApp.</p>
+
+      <form id="form">
+        <div><label for="nombre">Nombre</label><input id="nombre" required></div>
+        <div><label for="producto">Producto</label>
+          <select id="producto">
+            <option>Mezcladora 9 p³</option>
+            <option>Mezcladora 11 p³</option>
+            <option>Winche de construcción 300 kg</option>
+            <option>Winche de construcción 500 kg</option>
+            <option>Motor a gasolina 7 HP</option>
+            <option>Motor a gasolina 13 HP</option>
+          </select></div>
+        <div><label for="cant">Cantidad</label><input id="cant" type="number" min="1" value="1"></div>
+        <div><label for="msg">Mensaje (opcional)</label><textarea id="msg" rows="3"></textarea></div>
+        <button class="btn" type="submit">Enviar por WhatsApp</button>
+      </form>
+
+      <p class="datos">
+        <strong>Teléfono / WhatsApp:</strong> +51 999 999 999<br>
+        <strong>Dirección:</strong> Av. Ejemplo 123, Lima<br>
+        <strong>Horario:</strong> Lunes a sábado, 8:00 a 18:00
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 MaquiPro. Todos los derechos reservados.</footer>
+
+<a class="wsp" href="https://wa.me/51999999999" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+  // CAMBIA ESTE NÚMERO por el tuyo (código de país + número, sin + ni espacios)
+  const NUMERO = "51999999999";
+
+  // Filtros de productos
+  const botones = document.querySelectorAll('.filtros button');
+  const tarjetas = document.querySelectorAll('.prod');
+  botones.forEach(b => b.addEventListener('click', () => {
+    botones.forEach(x => x.classList.remove('activo'));
+    b.classList.add('activo');
+    tarjetas.forEach(t => {
+      t.style.display = (b.dataset.f === 'todos' || t.dataset.cat === b.dataset.f) ? '' : 'none';
+    });
+  }));
+
+  // Botón "Cotizar" selecciona el producto en el formulario
+  document.querySelectorAll('[data-prod]').forEach(a => a.addEventListener('click', () => {
+    document.getElementById('producto').value = a.dataset.prod;
+  }));
+
+  // Enviar formulario a WhatsApp
+  document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const texto = `Hola, soy ${nombre.value}. Quiero cotizar ${cant.value} unidad(es) de: ${producto.value}. ${msg.value}`;
+    window.open(`https://wa.me/${NUMERO}?text=${encodeURIComponent(texto)}`, '_blank');
+  });
+</script>
+</body>
+</html>
